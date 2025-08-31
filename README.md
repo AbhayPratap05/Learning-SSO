@@ -1,7 +1,8 @@
 # 🔐 SSO Learning & Implementation Project
 
 This repository documents my journey of learning **Linux administration, web security, and Single Sign-On (SSO) with Keycloak**, along with end-to-end mini-projects in **Django, PHP, and Drupal**.  
-The ultimate goal: **deploy a production-ready SSO setup on DigitalOcean**, proving the ability to run, secure, and integrate multiple stacks with a centralized authentication system.
+
+Ultimate Goal: **Deploy a Production-Ready SSO setup on DigitalOcean**, proving the ability to run, secure, and integrate multiple stacks with a centralized authentication system.
 
 ---
 
@@ -79,7 +80,7 @@ The ultimate goal: **deploy a production-ready SSO setup on DigitalOcean**, prov
 
 ## 🚀 Progress
 
-- [✅] Part 1: Foundations
+- ✅ Part 1: Foundations
 - [ ] Part 2: Keycloak Basics
 - [ ] Part 3: Django SSO
 - [ ] Part 4: PHP SSO
