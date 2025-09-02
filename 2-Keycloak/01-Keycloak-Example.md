@@ -11,12 +11,11 @@ docker run -d \
   quay.io/keycloak/keycloak:26.0 start-dev
 ```
 
-    -  -> run in background.
-    - name keycloak -> container name.
-    -  8080:8080 -> map container port 8080 to host 8080.
-    -  KEYCLOAK_ADMIN=admin -> set admin username.
-    -  KEYCLOAK_ADMIN_PASSWORD=admin -> set admin password.
-
+- -d -> run in background.
+- --name keycloak -> container name.
+- -p 8080:8080 -> map container port 8080 to host 8080.
+- -e KEYCLOAK_ADMIN=admin -> set admin username.
+- -e KEYCLOAK_ADMIN_PASSWORD=admin -> set admin password.
 - quay.io/keycloak/keycloak:26.0 start-dev -> Keycloak image in dev mode.
 
 ## Access Keycloak Admin Console
