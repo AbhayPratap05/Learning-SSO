@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block content %}
+<h2>Home</h2>
+<h5>
+  {% if user.is_authenticated %}Welcome,
+  <span class="text-info">{{ user.username }}</span>!
+  <h4 class="mt-5">Role-Based Access Control (RBAC)</h4>
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col">Endpoint</th>
+        <th scope="col">Role Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+            <a
+                class="text-info"
+                href="{% url "call_api" %}"
+                >Call API</a
+              >
+        </td>
+        <td class="text-warning">
+            Admin
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <a
+                class="text-info"
+                href="{% url "manager_dashboard" %}"
+                >Manager Dashboard</a
+              >
+        </td>
+        <td class="text-warning">Manager</td>
+      </tr>
+    </tbody>
+  </table>
+  {% else %}You are not logged in. {% endif %}
+</h5>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+<h2>Profile</h2>
+<div class="bg-black p-2 my-2">
+  <p><b>User:</b> {{ user.username }} ({{ user.email }})</p>
+</div>
+
+<h3>Realm Roles</h3>
+<div class="bg-black p-2 my-2">
+  <pre><code>{{ realm_roles|default:"[]"|safe }}</code></pre>
+</div>
+
+<h3>Resource Access</h3>
+<div class="bg-black p-2 my-2">
+  <pre><code>{{ resource_access|safe }}</code></pre>
+</div>
+
+<h3>ID Token Claims</h3>
+<div class="bg-black p-2 my-2">
+  <pre><code>{{ id_claims|safe }}</code></pre>
+</div>
+
+<h3>Access Token Claims</h3>
+<div class="bg-black p-2 my-2">
+  <pre><code>{{ access_claims|safe }}</code></pre>
+</div>
+{% endblock %}
