@@ -97,30 +97,28 @@ pip install -r requirements.txt
 
 ## Project Structure
 
+```
 .
-├── core/ # Django app
-| |
-│ ├── urls.py # url endpoints
-│ ├── views.py # Views (home, profile, call-api)
-│ ├── decorators.py # Login/role protection
-│ └── utlis.py # Check valid access token
-│ └── utlis.py # How users are created/updated from claims
-│ └── ...  
-│ └── templates # Templates (base, home and profile)
-|  
-├── kc_demo/ # Project settings
-│ ├── settings.py
-│ ├── urls.py
-│ └── ...
-|
-├── Screenshots
-│ ├── ...
-|
-├── manage.py
-├── db.sqlite3
-├── .env
-├── requirements.txt
-└── documentation.md # This file
+├── core/                        # Main Django app
+│   ├── views.py                 # Views (home, profile, call-api)
+│   ├── urls.py                  # URL endpoints for app
+│   ├── decorators.py            # Custom login/role protection
+│   ├── utils.py                 # Helpers (validate token, update user from claims)
+│   ├── templates/               # HTML templates (base, home, profile)
+│   └── ...
+│
+├── kc_demo/                     # Django project config
+│   ├── settings.py              # Django & OIDC settings
+│   ├── urls.py                  # Root URL routing
+│   └── ...
+│
+├── Screenshots/                 # Screenshots for docs/demo
+├── manage.py                    # Django entrypoint
+├── db.sqlite3                   # Local SQLite DB (ignored in git)
+├── .env                         # Environment variables (client secret, etc.)
+├── requirements.txt             # Python dependencies
+└── documentation.md             # This documentation
+```
 
 ## Screenshots:
 
