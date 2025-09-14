@@ -115,6 +115,6 @@ php-app/
 
 ## Screenshots:
 
-![Home](screenshots/PHP-App.png)
-![Profile](screenshots/PHP-Profile.png)
+![Home](screenshots/PHP-App.jpeg)
+![Profile](screenshots/PHP-Profile.jpeg)
 ![Keycloak-Config](screenshots/Keycloak-Config.png)
