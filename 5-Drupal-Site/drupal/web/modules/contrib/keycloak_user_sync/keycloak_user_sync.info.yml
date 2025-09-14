@@ -1,0 +1,11 @@
+name: Keycloak User Sync
+type: module
+description: 'Syncs Drupal users with Keycloak SSO.'
+core_version_requirement: ^10.2 || ^11
+dependencies:
+  - drupal:user
+
+# Information added by Drupal.org packaging script on 2025-06-17
+version: '1.0.11'
+project: 'keycloak_user_sync'
+datestamp: 1750141596

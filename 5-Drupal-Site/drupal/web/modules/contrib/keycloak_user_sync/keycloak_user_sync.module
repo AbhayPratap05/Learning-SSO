@@ -1,0 +1,40 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\profile\Entity\Profile;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_entity_insert().
+ */
+function keycloak_user_sync_entity_insert(EntityInterface $entity) {
+  if ($entity instanceof User && $entity->getAccountName()) {
+    \Drupal::service('keycloak_user_sync.keycloak_service')->createUser($entity);
+  }
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function keycloak_user_sync_entity_update(EntityInterface $entity) {
+  if ($entity instanceof User && $entity->getAccountName()) {
+    \Drupal::service('keycloak_user_sync.keycloak_service')->updateUser($entity);
+  }
+  if ($entity instanceof Profile) {
+    // Load user from profile.
+    $user = $entity->getOwner();
+    // Only sync if user has a username to prevent checkout errors.
+    if ($user && $user->getAccountName()) {
+      \Drupal::service('keycloak_user_sync.keycloak_service')->updateUser($user);
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_delete().
+ */
+function keycloak_user_sync_entity_delete(EntityInterface $entity) {
+  if ($entity instanceof User) {
+    \Drupal::service('keycloak_user_sync.keycloak_service')->deleteUser($entity);
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "drupal/keycloak_user_sync",
+    "description": "Syncs Drupal users with Keycloak SSO.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "require-dev": {
+        "drupal/profile": "^1.0.0"
+    }
+}

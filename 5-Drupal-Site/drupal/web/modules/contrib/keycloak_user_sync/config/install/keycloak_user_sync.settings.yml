@@ -1,0 +1,11 @@
+field_mappings:
+  -
+    keycloak_field: email
+    source: user
+    drupal_field: mail
+insert_email_verified: true
+insert_required_actions: []
+update_email_verified: true
+update_required_actions: []
+update_existing_fields: false
+update_email_field: true

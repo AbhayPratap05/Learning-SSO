@@ -1,0 +1,4 @@
+administer keycloak user sync:
+  title: 'Administer Keycloak User Sync'
+  description: 'Configure Keycloak user synchronization settings.'
+  restrict access: TRUE

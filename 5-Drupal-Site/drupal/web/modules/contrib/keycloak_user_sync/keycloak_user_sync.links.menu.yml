@@ -1,0 +1,6 @@
+keycloak_user_sync.settings:
+  title: 'Keycloak User Sync'
+  description: 'Configure Keycloak user synchronization settings'
+  parent: user.admin_index
+  route_name: keycloak_user_sync.settings
+  weight: 10

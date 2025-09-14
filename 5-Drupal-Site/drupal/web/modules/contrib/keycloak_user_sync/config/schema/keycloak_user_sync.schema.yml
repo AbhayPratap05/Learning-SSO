@@ -1,0 +1,19 @@
+keycloak_user_sync.settings:
+  type: config_object
+  label: 'Keycloak User Sync settings'
+  mapping:
+    field_mappings:
+      type: sequence
+      label: 'Field mappings'
+      sequence:
+        type: mapping
+        mapping:
+          keycloak_field:
+            type: string
+            label: 'Keycloak field'
+          source:
+            type: string
+            label: 'Source'
+          drupal_field:
+            type: string
+            label: 'Drupal field'

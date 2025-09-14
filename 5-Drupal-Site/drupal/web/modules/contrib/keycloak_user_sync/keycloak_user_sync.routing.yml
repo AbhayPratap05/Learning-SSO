@@ -1,0 +1,9 @@
+keycloak_user_sync.settings:
+  path: '/admin/people/keycloak-sync'
+  defaults:
+    _form: '\Drupal\keycloak_user_sync\Form\KeycloakUserSyncSettingsForm'
+    _title: 'Keycloak User Sync'
+  requirements:
+    _permission: 'administer keycloak user sync'
+  options:
+    _admin_route: TRUE

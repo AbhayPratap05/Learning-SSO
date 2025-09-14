@@ -1,0 +1,17 @@
+services:
+  keycloak_user_sync.keycloak_service:
+    class: Drupal\keycloak_user_sync\Service\KeycloakService
+    arguments:
+      - '@http_client'
+      - '@config.factory'
+      - '@logger.factory'
+      - '@keycloak_user_sync.profile_service'
+      - '@settings'
+      - '@config.typed'
+
+  keycloak_user_sync.profile_service:
+    class: Drupal\keycloak_user_sync\Service\ProfileService
+    arguments:
+      - '@entity_type.manager'
+      - '@config.factory'
+      - '@logger.factory'

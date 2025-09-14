@@ -1,0 +1,16 @@
+name: Keycloak OpenID Connect
+description: Enables OpenID Connect Keycloak sign on and user data synchronization.
+package: Other
+
+type: module
+core_version_requirement: ^10.3 || ^11
+
+dependencies:
+  - openid_connect:openid_connect
+
+configure: openid_connect.admin_settings
+
+# Information added by Drupal.org packaging script on 2025-01-29
+version: '2.2.1'
+project: 'keycloak'
+datestamp: 1738172578
