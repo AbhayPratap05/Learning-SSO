@@ -1,0 +1,6 @@
+{
+    "name": "abhaypratap/4-php-app",
+    "require": {
+        "jumbojett/openid-connect-php": "^1.0"
+    }
+}
